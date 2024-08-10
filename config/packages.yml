@@ -1,0 +1,37 @@
+# 部署开发环境的配置文件
+
+toolkits:
+  - base
+  - python
+  - cpp
+  - go
+
+channels:
+  kms:
+    - kms.uniontech.com:8900:nqYvXZXdNPKNn335
+    - kms.uniontech.com:8900:Vlc1cGIyNTBaV05v
+  pip:
+    - https://pypi.tuna.tsinghua.edu.cn/simple/
+  apt:
+    - 
+
+dependencies:
+  base:
+    - git
+    - git-review
+    - openssh-server
+  python:
+    - python3
+    - pip3
+  cpp:
+    - g++
+    - gcc
+    - gdb
+    - cmake
+    - meson
+    - clangd
+    - qt5-default
+    - qtcreator
+  go:
+    - golang
+    - gopls

@@ -1,0 +1,14 @@
+about:
+  name: deepin-env-configer
+  version: 1.0
+  description: Tool for creating a dev environment in Deepin/UOS
+  author: Meha555
+  git: https://github.com/Meha555/deepin-env-configer.git
+
+type:
+  test:
+    - hw
+    - daily
+  dev:
+    - cpp
+    - go

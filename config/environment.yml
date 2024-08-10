@@ -1,0 +1,61 @@
+# 开发环境自身的配置文件
+
+system:
+  os-info:
+    tag: v20
+    product: 20240725.build
+    cdimage:
+    detail:
+      kernal:
+      graphic:
+        mesa:
+        drm:
+        opengl:
+        vulkan:
+
+  soc-info: 
+    name:
+    vendor:
+    arch:
+    cpu:
+      - name:
+      - vendor:
+      - nproc:
+    mem:
+      - name:
+      - vendor:
+      - size:
+    gpu:
+      - name:
+      - vendor:
+      - memory:
+
+projects:
+  kwin:
+    version: 
+    compiled:
+    git:
+  xorg:
+    version: 
+    compiled:
+    git:
+  kwin:
+    version: 
+    compiled:
+    git:
+  xwayland:
+    version: 
+    compiled:
+    git:
+  kwayland:
+    version: 
+    compiled:
+    git:
+  libwayland:
+    version: 
+    compiled:
+    git:
+  displayjack:
+    version: 
+    compiled:
+    git:

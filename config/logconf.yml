@@ -1,0 +1,39 @@
+version: 1
+disable_existing_loggers: True
+
+formatters:
+  tostrout:
+    class: colorlog.ColoredFormatter
+    format: "%(log_color)s%(asctime)s %(name)s [%(levelname)-6s] %(filename)-8s : line %(lineno)s - %(message)s"
+    datefmt: "%Y/%m/%d %H:%M:%S"
+    log_colors:
+      DEBUG: 'cyan'
+      INFO: 'white'
+      WARNING: 'yellow'
+      ERROR: 'red'
+      CRITICAL: 'bold_red'
+
+  tofile:
+    format: "%(asctime)s %(name)s [%(levelname)-6s] %(filename)-8s : line %(lineno)s - %(message)s"
+    datefmt: "%Y/%m/%d %H:%M:%S"
+
+handlers:
+  sh:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: tostrout
+    stream: ext://sys.stdout
+
+  fh:
+    class: logging.handlers.TimedRotatingFileHandler
+    filename: ./logs/0.log
+    interval: 1 # 日志轮转天数
+    backupCount: 10 # 保留的旧日志文件数量
+    when: midnight
+    level: DEBUG
+    formatter: tofile
+
+root:
+  level: DEBUG
+  handlers: [sh,fh] # 同时输出到文件和标准输出stdout
+  propagate: no
